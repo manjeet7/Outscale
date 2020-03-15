@@ -67,5 +67,75 @@
             Sites are launched or developed by using PHP scripting language. With a click of a second, there are thousands of schemes and products available at just one stop. Customers intending to search for desired products or have the shipment at their doorsteps can avail hassle free and easy payment gateway by shopping at any e-commerce website.
           </p>
 </ul>
+<h1>Contact Me</h1>
+<div class="form">
+    <form action="">
+        <div>
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="First Name" name="first name" id="fname" onfocusout="myname()" required>
+        <span id="firstname_message" style="color:red;margin-left:20px;"></span>
+        </div>
+
+        <label for="lname">Last Name</label>
+        <input type="text" placeholder="Last Name" name="last name" id="lname">
+          <div>
+        <label for="lname">Email</label>
+        <input type="text" placeholder="Email" name="last name" id="myemail" onfcusout="validateemail()" required>
+        <span id="email" style="color: crimson;margin-left: 20px"></span>
+        </div>
+             <a href="https://dribbble.com/jquintella" target="_blank">
+               
+             </a>
+
+             <label for="lname">Date of Birth</label>
+             
+        <div class="container">
+       
+                <input id="switch" type="checkbox" hidden>
+                <label for="switch" class="switch">
+                   <h1 class="female">✝</h1>
+                   <h1 class="male">➜</h1>
+                </label>
+                
+             </div>
+        <input type="text" placeholder="Date of Birth" name="last name">
+        <input type="submit" value="Submit" onclick="onsub()">
+    </form>
+<div class="gender">
+    <h1>Gender:</h1>
+
+</div>
+</div>
+<body>
+    <script>
+     function onsub(){
+      alert("i will revert to you Shortly");
+     }
+     function myname(){
+         var x = document.getElementById("fname").value;
+         if(x.length<1){
+          document.getElementById("firstname_message").innerHTML="This can't be blank";
+         }
+         else {
+        document.getElementById('firstname_message').innerHTML = "";
+    }
+     }
+     function validateemail(){
+         var x = document.getElementById("myemail").value;
+         if(x.length>20){
+             document.getElementById("email").innerHTML = "can't be this long"
+         }
+         else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        document.getElementById('email').innerHTML = "";
+    }
+    else   if(x.length<1){
+             document.getElementById("email").innerHTML = "can't be EMPTY"
+         }
+    else{
+        document.getElementById("email").innerHTML="";
+    }
+     }
+    </script>
+</body>
 
 </html>
