@@ -1,17 +1,27 @@
 <html>
     <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="outscal.css">
+            <link rel="icon" href="favicon.ico">
     </head>
-<div class="name">
-<h1>
-    Manjeet
-</h1>
-<h4>
-    contact:9582606178
-</h4>
+    <div class="container">
+    <button class="button button1"><a>Say Hello</a></button>
+    <div class="font">
+      <h1><b>Front End Developer and Programmer</b></h1>
+    </div>
+    <div class="line"></div>
+    <div class="line2"></div>
+    </div>
+<div class="header">
+        <img src="C:\Users\Manjeet\hello-world\IMG_1358.JPG" alt="Paris" width="300" height="300">
 </div>
+<div>
+    
+</div>
+
 <div class="skills">
 <h2 style="color: blue">Skills:</h2>
+<body>
 <ul >
     <li>Language &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Html,CSS,Javasript,C++,Core Java,Pyhon(Beginer)NodeJs</li>
     <li>Source   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Git</li>
@@ -55,19 +65,21 @@
 </div>
 <h2 style="color: blue">Projects:</h2>
 <ul>
+    <div class="skills">
     <li><b>E-Commerce Website</b></li>
     <p class="text"> E-commerce sites feature searching, merchandising and selling     of the products online. E-commerce site owners are able to   enjoy the downpour of money and advertisements too.
         Sites are launched or developed by using PHP scripting language. With a click of a second, there are thousands of schemes and products available at just one stop. Customers intending to search for desired products or have the shipment at their doorsteps can avail hassle free and easy payment gateway by shopping at any e-commerce website.
       </p>
 </ul>
-
+</div>
 <ul>
     <li><b>Python Object Detection System</b></li>
         <p class="text"> E-commerce sites feature searching, merchandising and selling     of the products online. E-commerce site owners are able to   enjoy the downpour of money and advertisements too.
             Sites are launched or developed by using PHP scripting language. With a click of a second, there are thousands of schemes and products available at just one stop. Customers intending to search for desired products or have the shipment at their doorsteps can avail hassle free and easy payment gateway by shopping at any e-commerce website.
           </p>
 </ul>
-<h1>Contact Me</h1>
+
+<h1 id="con">Contact Me</h1>
 <div class="form">
     <form action="">
         <div>
@@ -75,12 +87,16 @@
         <input type="text" placeholder="First Name" name="first name" id="fname" onfocusout="myname()" required>
         <span id="firstname_message" style="color:red;margin-left:20px;"></span>
         </div>
-
+          
+        <div>
         <label for="lname">Last Name</label>
-        <input type="text" placeholder="Last Name" name="last name" id="lname">
+        <input type="text" placeholder="Last Name" name="last name" id="lname" onfocusout="mylastname()" required>
+        <span id="lastname_message" style="color: crimson; margin-left:20px"></span>
+        </div>
+
           <div>
-        <label for="lname">Email</label>
-        <input type="text" placeholder="Email" name="last name" id="myemail" onfcusout="validateemail()" required>
+        <label for="Email">Email</label>
+        <input type="text" placeholder="Email" name="last name" id="Myemail" onfocusout="validatemail()" required>
         <span id="email" style="color: crimson;margin-left: 20px"></span>
         </div>
              <a href="https://dribbble.com/jquintella" target="_blank">
@@ -89,15 +105,6 @@
 
              <label for="lname">Date of Birth</label>
              
-        <div class="container">
-       
-                <input id="switch" type="checkbox" hidden>
-                <label for="switch" class="switch">
-                   <h1 class="female">✝</h1>
-                   <h1 class="male">➜</h1>
-                </label>
-                
-             </div>
         <input type="text" placeholder="Date of Birth" name="last name">
         <input type="submit" value="Submit" onclick="onsub()">
     </form>
@@ -106,12 +113,16 @@
 
 </div>
 </div>
+</body>
 <body>
     <script>
-     function onsub(){
+   var mylastname;
+   var validatemail;
+   var myname;
+     const onsub = () =>{
       alert("i will revert to you Shortly");
      }
-     function myname(){
+      myname=()=>{
          var x = document.getElementById("fname").value;
          if(x.length<1){
           document.getElementById("firstname_message").innerHTML="This can't be blank";
@@ -120,17 +131,31 @@
         document.getElementById('firstname_message').innerHTML = "";
     }
      }
-     function validateemail(){
-         var x = document.getElementById("myemail").value;
-         if(x.length>20){
+
+      mylastname = () =>{
+         var x = document.getElementById("lname").value;
+         if(x.length<1){
+          document.getElementById("lastname_message").innerHTML="This can't be blank";
+         }
+         else {
+        document.getElementById('lastname_message').innerHTML = "";
+    }
+     }
+     
+     validatemail=()=>{
+         var x = document.getElementById("Myemail").value;
+
+         if(x.length<1){
+             document.getElementById("email").innerHTML = "Can't be empty"
+         }
+         else if(x.length>20){
              document.getElementById("email").innerHTML = "can't be this long"
          }
+
          else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
         document.getElementById('email').innerHTML = "";
-    }
-    else   if(x.length<1){
-             document.getElementById("email").innerHTML = "can't be EMPTY"
-         }
+          }
+          
     else{
         document.getElementById("email").innerHTML="";
     }

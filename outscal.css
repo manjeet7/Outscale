@@ -1,7 +1,87 @@
-.name{
-    color: black;
-    text-align: left
+
+
+.header{
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  display: flex;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 500px;
+  margin-top:75px;
+  border-radius: 200px;
+ 
 }
+.prod{
+  border: 2px solid #ccc;
+  background-color: #eee;
+  display: inline-block;
+  height: 500px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+.prod1{
+  border: 2px solid #ccc;
+  background-color: #eee;
+  display: inline-block;
+  height: 500px;
+  width: 300px;
+  border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  border-radius: 50%;
+}
+.button1 {
+  border-radius: 100px;
+  height: 40px;
+  width: 100px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(91, 76, 175);
+  margin-left: 1200px;
+}
+.button1:hover{
+ color: blueviolet
+}
+.line{
+  width: 500px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  position: absolute;
+  margin-top: 150px;
+  }
+  .line2{
+    width: 550px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
+    margin-left: 803px;
+    margin-top: 150px
+    }
+.font{
+margin-left: 380px;
+margin-top: 50px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: darkslategrey
+}
+
+/* .header img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.header span {
+  font-size: 20px;
+  margin-right: 15px;
+} */
+
+
 .skills{
    text-align: left
 }
@@ -30,102 +110,9 @@ p.text{
   text-align: initial;
 }
 body{
-  background-color:#F5F5F5;
-}
-.switch{
   background-color:white;
-  width:10vw;
-  height:2vw;
-  position:absolute;
-  border-radius:30vw;
-  border:3px solid #ccc;
-  cursor: pointer;
-  user-select: none;
-  display:inline-block;
-  top:180%;
-  left:18%;
-  transform:translate(-50%, -50%);
-}
-.switch::before, .switch::after{
-  content:'';
-  width:2vw;
-  height:2vw;
-  background-color:white;
-  position:absolute;
-  border-radius:50%;
-  top:-10%;
-  left:-3%;
-  transition: all 350ms cubic-bezier(0, 0.95, 0.38, 0.98), background 150ms ease;
-  transform-origin: right center;
-
-}
-.switch::before{
-  border:1vw solid lightblue;
-}
-.switch::after{
-  background:#FBD3E1;
-  border:1vw solid pink;
-}
-input:checked + .switch:before {
-  background: #D3F0FB;
-  transform: translateX(165%);
-  border:1vw solid pink;
-}
-input + .switch .female{
-  color:pink;
-}
-input:checked + .switch .male{
-  color:lightblue;
-}
-input + .switch .male{
-  color:#ccc;
-}
-input:checked + .switch .female{
-  color:#ccc;
-}
-input:checked + .switch:after {
-  background: #D3F0FB;
-  transform: translateX(165%);
-  border:1vw solid lightblue;
-}
-.female, .male{
-  position:absolute;
-  font-weight:lighter;
-  color:#ccc;
-}
-.female{
-  z-index:-1;
-  top:13%;
-  left:2%;
-  transform:rotate(180deg);
-  font-size:5vw;
-}
-.male{
-  z-index:-1;
-  left:87%;
-  top:-145%;
-  font-size:5vw;
-  transform:rotate(-50deg);
-}
-a .i1{
-  width:10vh;
-  bottom:2%;
-  position:absolute;
-  right:3%;
-  text-decoration:none;
-  color:#ccc;
-  font-size:2vw;
-  animation:bounce 2s alternate infinite;
-}
-.i1{
-  opacity:0.5;
 }
 
-@keyframes bounce { 
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-  40% {transform: translateY(-30px);} 
-  60% {transform: translateY(-15px);} 
-}
 .form{
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -139,6 +126,9 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+#con h1{
+  text-align: center;
 }
 
 input[type=submit] {
@@ -159,3 +149,7 @@ input[type=submit]:hover {
   margin-top: -340px;
  left: 100px;
 }
+#skills{
+  animation-timing-function: linear;
+}
+
